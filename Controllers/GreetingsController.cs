@@ -10,12 +10,13 @@ public class GreetingsController : ControllerBase {
         Greetings = new string[]{"Gotta Catch'em All!", "Bulbasaur", "Charmander", "Squirtle"};
     }
 
-    [HttpGet]
+    [HttpGet] 
+    // ENDPOINT: api/greetings
     public IEnumerable<String> GetAllGreetings(){
         return Greetings;
     }
 
-
+    // ENDPOINT: api/greetings/{index}
     [HttpGet("{index}")]
     public String GetGreeting(long index){
         String greeting;
